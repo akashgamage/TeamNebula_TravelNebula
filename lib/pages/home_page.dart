@@ -229,6 +229,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
 
+                    // "DATE" and "PASSENGERS"
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20.0, vertical: 10),
@@ -267,16 +268,118 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
+
+                    // "SEARCH" button
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: GradientButton(
+                        onPressed: () {},
+                        height: 60.0,
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.search,
+                              color: Colors.white,
+                              size: 20,
+                            ),
+                            SizedBox(width: 8),
+                            Text(
+                              'Search',
+                              style: TextStyle(
+                                  fontSize: 16.0, color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
             ),
+            // 4 slide buttons for departments
             Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: EdgeInsets.symmetric(vertical: displayWidth * .05),
               child: Container(
                 height: 400,
-                width: displayWidth,
-                color: Colors.blue,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 255, 255, 255),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(50, 50, 50, 50),
+                      // offset: Offset(0.0, 0.0),
+                      blurRadius: 5,
+                      // spreadRadius: 1,
+                      // inset: true,
+                    ),
+                    BoxShadow(
+                      color: Color.fromARGB(50, 50, 50, 50),
+                      // offset: Offset(0.0, 0.0),
+                      blurRadius: 5,
+                      // spreadRadius: 1,
+                      // inset: true,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: displayWidth * .05,
+                          vertical: displayWidth * .025),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: displayWidth * .025),
+                        child: Text(
+                          'Suggetions For You',
+                          style: TextStyle(
+                            fontSize: displayWidth * .05,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ListView(
+                        scrollDirection:
+                            Axis.horizontal, // Horizontal scrolling
+                        children: [
+                          // Computer Science & Software Engineering Button
+                          LocationButton(
+                            imageAsset: 'assets/images/location1.png',
+                            title: 'Elysium Colony\n',
+                            description: 'Destination',
+                            onTap: () {
+                              // Navigate to the related pages
+                            },
+                          ),
+
+                          // Information & System Science Button
+                          LocationButton(
+                            imageAsset: 'assets/images/location2.png',
+                            title: 'Olympus X\n',
+                            description: 'Destination',
+                            onTap: () {
+                              // Navigate to the related pages
+                            },
+                          ),
+
+                          // Data Science Button
+                          LocationButton(
+                            imageAsset: 'assets/images/location3.png',
+                            title: 'Meridian Space\n',
+                            description: 'Destination',
+                            onTap: () {
+                              // Navigate to the related pages
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: displayWidth * .025),
+                  ],
+                ),
               ),
             ),
             Padding(
@@ -289,5 +392,153 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ));
+  }
+}
+
+class GradientButton extends StatelessWidget {
+  final VoidCallback onPressed;
+  final Widget child;
+  final double width;
+  final double height;
+  final List<Color> colors;
+
+  const GradientButton({
+    required this.onPressed,
+    required this.child,
+    this.width = double.infinity,
+    this.height = 50.0,
+    this.colors = const [
+      Color.fromRGBO(48, 0, 183, 1),
+      Color.fromRGBO(161, 128, 255, 1)
+    ],
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        padding: EdgeInsets.zero,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+        ),
+        primary: Colors.transparent,
+      ),
+      child: Ink(
+        width: width,
+        height: height,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: colors,
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+          borderRadius: BorderRadius.circular(50.0),
+        ),
+        child: Center(child: child),
+      ),
+    );
+  }
+}
+
+class LocationButton extends StatelessWidget {
+  final String imageAsset;
+  final String title;
+  final String description;
+  final VoidCallback onTap;
+  const LocationButton({
+    required this.imageAsset,
+    required this.title,
+    required this.description,
+    required this.onTap,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return _buildLocationButtons(
+      imageAsset: imageAsset,
+      title: title,
+      description: description,
+      onTap: onTap,
+    );
+  }
+
+  Widget _buildLocationButtons({
+    required String imageAsset,
+    required String title,
+    required String description,
+    required VoidCallback onTap,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
+      child: Container(
+        width: 230,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: Color.fromARGB(255, 0, 92, 46),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 1,
+              blurRadius: 5,
+              offset: const Offset(0, 0),
+            ),
+          ],
+        ),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: onTap,
+            borderRadius: BorderRadius.circular(16),
+            splashColor: const Color.fromARGB(255, 255, 255, 255),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Image
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(16),
+                  child: Image.asset(
+                    imageAsset,
+                    width: 250,
+                    height: 200,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+
+                // Description and Title
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          title,
+                          style: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          description,
+                          style: const TextStyle(
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 5),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
