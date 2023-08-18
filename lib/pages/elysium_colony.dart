@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_nebula/pages/booking_page.dart';
 import 'package:travel_nebula/pages/home_page.dart';
 
 class ElysiumColony extends StatefulWidget {
@@ -934,7 +935,12 @@ class _ElysiumColonyState extends State<ElysiumColony> {
 
                 // Book Your Tour Button (Gradient Button)
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Booking()));
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                       boxShadow: [
