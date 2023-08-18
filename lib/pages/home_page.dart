@@ -15,6 +15,8 @@ class _HomePageState extends State<HomePage> {
     'Nebula Station Olympus X - Mars',
   ];
 
+  String _selectedSortOption = 'Ratings';
+
   DateTime? selectedDate;
 
   Future<void> _selectDate(BuildContext context) async {
@@ -332,7 +334,7 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: EdgeInsets.only(top: displayWidth * .025),
                         child: Text(
-                          'Suggetions For You',
+                          'Best Destinations',
                           style: TextStyle(
                             fontSize: displayWidth * .05,
                             fontWeight: FontWeight.bold,
@@ -342,10 +344,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Expanded(
                       child: ListView(
-                        scrollDirection:
-                            Axis.horizontal, // Horizontal scrolling
+                        scrollDirection: Axis.horizontal,
                         children: [
-                          // Computer Science & Software Engineering Button
                           LocationButton(
                             imageAsset: 'assets/images/location1.png',
                             title: 'Elysium Colony\n',
@@ -354,8 +354,6 @@ class _HomePageState extends State<HomePage> {
                               // Navigate to the related pages
                             },
                           ),
-
-                          // Information & System Science Button
                           LocationButton(
                             imageAsset: 'assets/images/location2.png',
                             title: 'Olympus X\n',
@@ -364,8 +362,6 @@ class _HomePageState extends State<HomePage> {
                               // Navigate to the related pages
                             },
                           ),
-
-                          // Data Science Button
                           LocationButton(
                             imageAsset: 'assets/images/location3.png',
                             title: 'Meridian Space\n',
@@ -382,12 +378,112 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
+
+            // The best tours container
             Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Container(
-                height: 400,
-                width: displayWidth,
-                color: Colors.red,
+              padding: EdgeInsets.all(displayWidth * .05),
+              child: SizedBox(
+                height: displayWidth * 1.4,
+                width: double.infinity,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding:
+                          EdgeInsets.symmetric(vertical: displayWidth * .025),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: displayWidth * .01),
+                            child: Text(
+                              'The Best Tours',
+                              style: TextStyle(
+                                fontSize: displayWidth * .05,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          Padding(
+                              padding: EdgeInsets.only(top: displayWidth * .01),
+                              child: TextButton.icon(
+                                onPressed: () {},
+                                style: ButtonStyle(),
+                                label: Text("Next"),
+                                icon: Icon(Icons.arrow_forward_ios_rounded),
+                              )),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: displayWidth * .01),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Sorted by',
+                            style: TextStyle(
+                              fontSize: displayWidth * .04,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                          SizedBox(width: displayWidth * 0.02),
+                          DropdownButton<String>(
+                            value: _selectedSortOption,
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                _selectedSortOption = newValue!;
+                              });
+                            },
+                            items: <String>[
+                              'Ratings',
+                              'Price',
+                              'Passenger Capacity',
+                            ].map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          LongButton(
+                            imageAsset: 'assets/images/travel1.png',
+                            description: 'Description',
+                            title: 'Nebula Shuttle X',
+                            backgroundColor: Color.fromARGB(255, 9, 0, 136),
+                            onTap: () {
+                              // Handle button tap action
+                            },
+                          ),
+                          LongButton(
+                            imageAsset: 'assets/images/travel2.png',
+                            description: 'Description',
+                            title: 'Nebula Z11',
+                            backgroundColor: Color.fromARGB(255, 255, 42, 42),
+                            onTap: () {
+                              // Handle button tap action
+                            },
+                          ),
+                          LongButton(
+                            imageAsset: 'assets/images/travel3.png',
+                            description: 'Description',
+                            title: 'Nebula YX1',
+                            backgroundColor: Color.fromARGB(255, 137, 161, 138),
+                            onTap: () {
+                              // Handle button tap action
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -535,6 +631,98 @@ class LocationButton extends StatelessWidget {
 
                 const SizedBox(height: 5),
               ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class LongButton extends StatelessWidget {
+  final String imageAsset;
+  final String title;
+  final String description;
+  final Color backgroundColor;
+  final VoidCallback onTap;
+
+  const LongButton({
+    required this.imageAsset,
+    required this.title,
+    required this.description,
+    required this.backgroundColor,
+    required this.onTap,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    double displayWidth = MediaQuery.of(context).size.width;
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 6),
+      child: Container(
+        width: displayWidth,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(displayWidth * .04),
+          color: backgroundColor,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              spreadRadius: 1,
+              blurRadius: 5,
+              offset: const Offset(0, 0),
+            ),
+          ],
+        ),
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: onTap,
+            borderRadius: BorderRadius.circular(displayWidth * .03),
+            splashColor: const Color.fromARGB(255, 255, 255, 255),
+            child: Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: displayWidth * .03,
+                  vertical: displayWidth * .025),
+              child: Row(
+                children: [
+                  Image.asset(
+                    imageAsset,
+                    width: displayWidth * .22,
+                    height: displayWidth * .22,
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(width: displayWidth * .05),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          title,
+                          style: TextStyle(
+                            fontSize: displayWidth * .05,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(height: displayWidth * .0125),
+                        Text(
+                          description,
+                          style: const TextStyle(
+                              fontSize: 16, color: Colors.white),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    size: displayWidth * .06,
+                    color: Colors.white,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
