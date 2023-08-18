@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_nebula/pages/home_page.dart';
 
 class ElysiumColony extends StatefulWidget {
   const ElysiumColony({super.key});
@@ -752,7 +753,12 @@ class _ElysiumColonyState extends State<ElysiumColony> {
               children: [
                 // Cancer Button
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomePage()));
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     minimumSize: Size(displayWidth * .44, displayWidth * .16),

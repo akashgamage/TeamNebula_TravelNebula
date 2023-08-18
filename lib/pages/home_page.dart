@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travel_nebula/pages/elysium_colony.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,9 +11,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<String> stationNames = [
     'Nebula Station Los Alamos - Earth',
-    'Nebula Station Amsterdam - Earth',
+    'Option 2 - Earth',
     'Nebula Station Elysium Colony - Mars',
-    'Nebula Station Olympus X - Mars',
+    'Option 2 - Mars',
   ];
 
   String _selectedSortOption = 'Ratings';
@@ -275,7 +276,12 @@ class _HomePageState extends State<HomePage> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: GradientButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ElysiumColony()));
+                        },
                         height: 60.0,
                         child: const Row(
                           mainAxisAlignment: MainAxisAlignment.center,

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:travel_nebula/pages/home_page.dart';
 import 'package:travel_nebula/pages/signin_page.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -15,30 +14,26 @@ class SignUpPage extends StatelessWidget {
         automaticallyImplyLeading: false,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Padding(
-          padding: const EdgeInsets.only(top: 40, right: 10),
-          child: Row(
-            children: [
-              IconButton(
-                icon: const Icon(Icons.arrow_back_ios_new, color: Colors.blue),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-              const SizedBox(width: 2),
-              const Text(
-                'Back',
-                style: TextStyle(color: Colors.blue),
-              ),
-            ],
-          ),
+        title: Row(
+          children: [
+            IconButton(
+              icon: const Icon(Icons.arrow_back_ios_new, color: Colors.blue),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+            const Text(
+              'Back',
+              style: TextStyle(color: Colors.blue),
+            ),
+          ],
         ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
-            height: 20,
+            height: 40,
           ),
           const Padding(
             padding: EdgeInsets.only(left: 16, right: 16),
@@ -51,26 +46,30 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 16,
           ),
-          const Padding(
-            padding: EdgeInsets.only(left: 16, right: 16),
-            child: Text('Start your journey with',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w400)),
-          ),
-          const Padding(
-            padding: EdgeInsets.only(left: 16, right: 16),
-            child: Text('Travel Nebula',
-                style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w800)),
+          const Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 16, right: 8),
+                child: Text('Start your journey with',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w300)),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 16),
+                child: Text('Travel Nebula',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600)),
+              ),
+            ],
           ),
           const SizedBox(
-            height: 15,
+            height: 30,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
@@ -84,7 +83,7 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 30,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
@@ -98,7 +97,7 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 30,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
@@ -112,7 +111,7 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 30,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
@@ -125,21 +124,16 @@ class SignUpPage extends StatelessWidget {
                   ],
                   begin: Alignment.centerLeft,
                   end: Alignment.centerRight,
-                  stops: [0.0, 1.0],
-                  transform:
-                      GradientRotation(98.41 * (3.1415926535897932 / 180)),
                 ),
                 borderRadius: BorderRadius.circular(30),
               ),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const HomePage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignInPage()));
                 },
                 style: ElevatedButton.styleFrom(
-                  fixedSize: const Size(500, 50),
+                  fixedSize: const Size(500, 64),
                   elevation: 0, // Remove button shadow
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25)),
@@ -147,13 +141,13 @@ class SignUpPage extends StatelessWidget {
                 ),
                 child: const Text(
                   'Sign Up',
-                  style: TextStyle(fontSize: 18),
+                  style: TextStyle(fontSize: 20),
                 ),
               ),
             ),
           ),
           const SizedBox(
-            height: 10,
+            height: 20,
           ),
           Row(
             children: [
