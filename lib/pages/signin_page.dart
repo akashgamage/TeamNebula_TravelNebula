@@ -27,56 +27,76 @@ class SignInPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(15.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 16, right: 16),
+            child: Text(
               'Sign In',
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 40,
                   fontWeight: FontWeight.w900),
             ),
-            const SizedBox(height: 20),
-            const Text('Start your journey with',
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 16, right: 16),
+            child: Text('Start your journey with',
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.w400)),
-            const Text('Travel Nebula',
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 16, right: 16),
+            child: Text('Travel Nebula',
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 20,
                     fontWeight: FontWeight.w600)),
-            const SizedBox(
-              height: 20,
-            ),
-            TextField(
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            child: TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   hintText: 'User ID or E-mail',
                   hintStyle: const TextStyle(color: Colors.grey, fontSize: 20)),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            TextField(
+          ),
+          const SizedBox(
+            height: 15,
+          ),
+          const SizedBox(
+            height: 2,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            child: TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
                   hintText: 'Password',
                   hintStyle: const TextStyle(color: Colors.grey, fontSize: 20)),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            child: Container(
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
                   colors: [
@@ -111,58 +131,58 @@ class SignInPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 140,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: Container(
                   height: 1,
                   color: Colors.grey,
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
                 ),
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.green,
-                  ),
+              ),
+              Container(
+                width: 10,
+                height: 10,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.green,
                 ),
-                const Center(
-                  child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'or',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'or',
+                  style: TextStyle(fontSize: 18),
                 ),
-                Container(
-                  width: 10,
-                  height: 10,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.green,
-                  ),
+              ),
+              Container(
+                width: 10,
+                height: 10,
+                decoration: const BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.green,
                 ),
-                Container(
-                  width: 140,
+              ),
+              Expanded(
+                child: Container(
                   height: 1,
                   color: Colors.grey,
-                  margin: const EdgeInsets.symmetric(horizontal: 10),
                 ),
-              ],
-            ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text('Sign Up with', style: TextStyle(fontSize: 18))],
-            ),
-            const SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              ),
+            ],
+          ),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text('Sign Up with', style: TextStyle(fontSize: 18))],
+          ),
+          const SizedBox(height: 5),
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Container(
                   padding: const EdgeInsets.all(20),
@@ -204,8 +224,10 @@ class SignInPage extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 10),
-            Row(
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
@@ -214,12 +236,12 @@ class SignInPage extends StatelessWidget {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: const Text('Sign Up'),
+                  child: const Text('Sign Up', style: TextStyle(fontSize: 18)),
                 )
               ],
-            )
-          ],
-        ),
+            ),
+          )
+        ],
       ),
     );
   }
