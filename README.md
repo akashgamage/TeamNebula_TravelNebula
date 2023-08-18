@@ -73,6 +73,7 @@ This project was developed by a team of talented contributors from NSBM Green Un
 
 - Akash Gamage [@](https://github.com/)
 - Akshith Sriyanjith [@](https://github.com/Akshisriyan)
+- Dulanja De Silva [@](https://github.com/dula2000)
 
 ## About Rootcode Tech-Triathlon
 
