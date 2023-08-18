@@ -567,7 +567,7 @@ class Booking extends StatelessWidget {
                   ),
                 ),
 
-                //cancel and make payment buttons
+                
 
                 const SizedBox(height: 50),
                 
