@@ -703,30 +703,136 @@ class _ElysiumColonyState extends State<ElysiumColony> {
             // Climate container
             Padding(
               padding: EdgeInsets.all(displayWidth * .05),
-              child: Container(
-                height: 400,
+              child: SizedBox(
                 width: displayWidth,
-                color: Colors.red,
+                child: Column(
+                  children: [
+                    const Row(
+                      children: [
+                        Text(
+                          'Climate',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w700,
+                            height: 1.10,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Container(
+                      width: displayWidth,
+                      height: displayWidth * 0.35,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/climate.png"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
 
             // Population chart container
             Padding(
               padding: EdgeInsets.all(displayWidth * .05),
-              child: Container(
-                height: 400,
+              child: SizedBox(
                 width: displayWidth,
-                color: Colors.red,
+                child: Column(
+                  children: [
+                    const Row(
+                      children: [
+                        Text(
+                          'Population Chart',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 20,
+                            fontFamily: 'Inter',
+                            fontWeight: FontWeight.w700,
+                            height: 1.10,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                    Container(
+                      width: displayWidth,
+                      height: displayWidth * 0.35,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/population.png"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
               ),
             ),
 
             // Luggage Information container
             Padding(
               padding: EdgeInsets.all(displayWidth * .05),
-              child: Container(
-                height: 400,
+              child: SizedBox(
                 width: displayWidth,
-                color: Colors.red,
+                height: displayWidth * .8,
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          child: const Row(
+                            children: [
+                              Text(
+                                'Luggage Information',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 20,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w700,
+                                  height: 1.10,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 5),
+                    Container(
+                      padding: const EdgeInsets.all(8),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 370,
+                            child: Text(
+                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tellus a ex finibus venenatis id non massa. Phasellus pretium lectus non velit mattis bibendum. Fusce quis sodales justo, id interdum nulla. In non risus ac nibh feugiat finibus. Vivamus est elit, suscipit vel lacinia et, iaculis ac ex. Sed in ipsum scelerisque, egestas ligula ac, condimentum metus. Etiam egestas ligula velit, vitae efficitur mauris tempus in. Donec ac eleifend elit.',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 16,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w400,
+                                height: 1.10,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
@@ -741,8 +847,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Color.fromARGB(225, 149, 216, 255),
-                  Color.fromARGB(224, 232, 236, 255),
+                  Color.fromARGB(239, 0, 32, 50),
+                  Color.fromARGB(230, 150, 168, 255),
                 ],
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
