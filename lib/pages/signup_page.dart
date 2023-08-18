@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/home_page.dart';
-import 'package:travel_nebula/pages/signup_page.dart';
+import 'package:travel_nebula/pages/signin_page.dart';
 
-class SignInPage extends StatelessWidget {
-  SignInPage({super.key});
+class SignUpPage extends StatelessWidget {
+  SignUpPage({super.key});
 
   final idcontroller = TextEditingController();
   final pwcontroller = TextEditingController();
@@ -43,7 +43,7 @@ class SignInPage extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.only(left: 16, right: 16),
             child: Text(
-              'Sign In',
+              'Sign Up',
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 40,
@@ -70,7 +70,7 @@ class SignInPage extends StatelessWidget {
                     fontWeight: FontWeight.w800)),
           ),
           const SizedBox(
-            height: 20,
+            height: 15,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
@@ -79,15 +79,12 @@ class SignInPage extends StatelessWidget {
               decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10)),
-                  hintText: 'User ID or E-mail',
+                  hintText: 'E-mail',
                   hintStyle: const TextStyle(color: Colors.grey, fontSize: 20)),
             ),
           ),
           const SizedBox(
-            height: 15,
-          ),
-          const SizedBox(
-            height: 2,
+            height: 10,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
@@ -101,7 +98,21 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 20,
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            child: TextField(
+              controller: pwcontroller,
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  hintText: 'Re-enter Password',
+                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 20)),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
           ),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
@@ -135,7 +146,7 @@ class SignInPage extends StatelessWidget {
                   backgroundColor: Colors.transparent,
                 ),
                 child: const Text(
-                  'Sign In',
+                  'Sign Up',
                   style: TextStyle(fontSize: 18),
                 ),
               ),
@@ -189,7 +200,7 @@ class SignInPage extends StatelessWidget {
           ),
           const SizedBox(height: 5),
           Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -234,31 +245,31 @@ class SignInPage extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  'Don\'t have an account?',
-                  style: TextStyle(fontSize: 18),
-                ),
-                GestureDetector(
-                  onTap: () {
-                    //SIGN UP LINK
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignUpPage()));
-                  },
-                  child: const Text(
-                    ' Sign Up',
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text(
+                'Already have an account?',
+                style: TextStyle(fontSize: 18),
+              ),
+              GestureDetector(
+                onTap: () {
+                  //SIGN UP LINK
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SignInPage()));
+                },
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text(
+                    ' Sign In',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.blue,
                     ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           )
         ],
       ),
