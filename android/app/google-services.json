@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "118109128001",
+    "project_id": "nebula-55342",
+    "storage_bucket": "nebula-55342.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118109128001:android:fb1c9b9aad96aec0b20dc0",
+        "android_client_info": {
+          "package_name": "com.example.travel_nebula"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "118109128001-t9sdso7pgu93vfhr7q8kl1nkvm23pgo0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHs493yNWhNNPwo7nRBm9EZT_I6Re2GBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "118109128001-t9sdso7pgu93vfhr7q8kl1nkvm23pgo0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "118109128001-01oc9cijmdrhpgc2pa9rmrb4ob2kgabo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.travelNebula.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
