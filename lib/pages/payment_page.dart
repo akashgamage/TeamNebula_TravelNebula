@@ -386,29 +386,29 @@ class _PaymentState extends State<Payment> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _SelectableImage(
-              imagePath: "images/card3.png",
-              isSelected: selectedImage == "images/card3.png",
+              imagePath: "assets/images/card3.png",
+              isSelected: selectedImage == "assets/images/card3.png",
               onTap: () {
                 setState(() {
-                  selectedImage = "images/card3.png";
+                  selectedImage = "assets/images/card3.png";
                 });
               },
             ),
             _SelectableImage(
-              imagePath: "images/card2.png",
-              isSelected: selectedImage == "images/card2.png",
+              imagePath: "assets/images/card2.png",
+              isSelected: selectedImage == "assets/images/card2.png",
               onTap: () {
                 setState(() {
-                  selectedImage = "images/card2.png";
+                  selectedImage = "assets/images/card2.png";
                 });
               },
             ),
             _SelectableImage(
-              imagePath: "images/card1.png",
-              isSelected: selectedImage == "images/card1.png",
+              imagePath: "assets/images/card1.png",
+              isSelected: selectedImage == "assets/images/card1.png",
               onTap: () {
                 setState(() {
-                  selectedImage = "images/card1.png";
+                  selectedImage = "assets/images/card1.png";
                 });
               },
             ),
@@ -435,21 +435,21 @@ class _PaymentState extends State<Payment> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             _SelectableImage(
-              imagePath: "images/Bank2.png",
-              isSelected: selectedImage == "images/Bank2.png",
+              imagePath: "assets/images/Bank2.png",
+              isSelected: selectedImage == "assets/images/Bank2.png",
               onTap: () {
                 setState(() {
-                  selectedImage = "images/Bank2.png";
+                  selectedImage = "assets/images/Bank2.png";
                 });
               },
             ),
             const SizedBox(width: 20),
             _SelectableImage(
-              imagePath: "images/Bank3.png",
-              isSelected: selectedImage == "images/Bank3.png",
+              imagePath: "assets/images/Bank3.png",
+              isSelected: selectedImage == "assets/images/Bank3.png",
               onTap: () {
                 setState(() {
-                  selectedImage = "images/Bank3.png";
+                  selectedImage = "assets/images/Bank3.png";
                 });
               },
             ),
