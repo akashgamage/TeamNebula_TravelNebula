@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nebula/booking.dart';
+
+
+import 'booking_page.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);

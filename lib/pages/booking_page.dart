@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nebula/payment.dart';
+
+import 'package:travel_nebula/pages/payment_page.dart';
 
 class Booking extends StatelessWidget {
   const Booking({super.key});
