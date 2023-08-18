@@ -9,6 +9,16 @@ class ElysiumColony extends StatefulWidget {
 }
 
 class _ElysiumColonyState extends State<ElysiumColony> {
+
+  int _selectedImageIndex = 0;
+  final List<String> _imageUrls = [
+    'assets/images/gallery1.png',
+    'assets/images/gallery2.png',
+    'assets/images/gallery3.png',
+    'assets/images/gallery4.png',
+    'assets/images/gallery5.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     double displayWidth = MediaQuery.of(context).size.width;
@@ -20,13 +30,52 @@ class _ElysiumColonyState extends State<ElysiumColony> {
           children: [
             // Image container
             Padding(
-              padding: EdgeInsets.all(displayWidth * .05),
-              child: Container(
-                height: 400,
-                width: displayWidth,
-                color: Colors.red,
+            padding: const EdgeInsets.all(8.0),
+            child: SizedBox(
+              height: 450,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                  child: Image.asset(_imageUrls[_selectedImageIndex],
+                      fit: BoxFit.cover),
+                ),
               ),
             ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: SizedBox(
+              height: 100,
+              child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: _imageUrls.length,
+                itemBuilder: (context, index) {
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        _selectedImageIndex = index;
+                      });
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: SizedBox(
+                        width: 80,
+                        height: 80,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(
+                              10), // Adjust the radius as needed
+                          child:
+                              Image.asset(_imageUrls[index], fit: BoxFit.cover),
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
+
 
             // Description container
             Padding(
