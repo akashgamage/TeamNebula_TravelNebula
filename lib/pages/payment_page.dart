@@ -18,7 +18,7 @@ class _PaymentState extends State<Payment> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 242, 243, 244),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         title: const Text(
           'Make Payment',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
@@ -33,7 +33,7 @@ class _PaymentState extends State<Payment> {
                     horizontal: 20.0, vertical: 30.0),
                 child: Container(
                   width: displayWidth,
-                  height: 338,
+                  
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -50,15 +50,15 @@ class _PaymentState extends State<Payment> {
                   ),
                   child: Column(
                     children: [
-                      // Add some spacing
+                      
 
                       Image.asset(
                         'assets/images/elysiumbooking.png',
                         width: displayWidth,
                         fit: BoxFit.cover,
                       ),
-                      //payment details
 
+                      //ticket details
                       Padding(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20.0, vertical: 30.0),
@@ -77,61 +77,22 @@ class _PaymentState extends State<Payment> {
                                 ),
                               ),
                               const SizedBox(height: 16),
-                              Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      const Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            'For one ticket',
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 14,
-                                              fontFamily: 'Inter',
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(height: 8),
-                                          Text(
-                                            'No of tickets',
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 14,
-                                              fontFamily: 'Inter',
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                          SizedBox(height: 8),
-                                          Text(
-                                            'Space Tax',
-                                            style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 14,
-                                              fontFamily: 'Inter',
-                                              fontWeight: FontWeight.w500,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      const SizedBox(width: 159),
-                                      Container(
-                                        child: const Column(
+                              FittedBox(
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        const Column(
                                           mainAxisSize: MainAxisSize.min,
                                           mainAxisAlignment:
-                                              MainAxisAlignment.center,
+                                              MainAxisAlignment.start,
                                           crossAxisAlignment:
-                                              CrossAxisAlignment.end,
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Text(
-                                              '\$ 250 000',
+                                              'For one ticket',
                                               style: TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 14,
@@ -141,7 +102,7 @@ class _PaymentState extends State<Payment> {
                                             ),
                                             SizedBox(height: 8),
                                             Text(
-                                              '4',
+                                              'No of tickets',
                                               style: TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 14,
@@ -151,7 +112,7 @@ class _PaymentState extends State<Payment> {
                                             ),
                                             SizedBox(height: 8),
                                             Text(
-                                              '\$ 20 000',
+                                              'Space Tax',
                                               style: TextStyle(
                                                 color: Colors.black,
                                                 fontSize: 14,
@@ -161,38 +122,79 @@ class _PaymentState extends State<Payment> {
                                             ),
                                           ],
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  const SizedBox(height: 16),
-                                  Container(
-                                    child: const Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
-                                          'Total',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 16,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w700,
-                                          ),
-                                        ),
-                                        SizedBox(width: 186),
-                                        Text(
-                                          '\$ 1 020 000',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 16,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w700,
+                                        const SizedBox(width: 159),
+                                        Container(
+                                          child: const Column(
+                                            mainAxisSize: MainAxisSize.min,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.end,
+                                            children: [
+                                              Text(
+                                                '\$ 250 000',
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                  fontFamily: 'Inter',
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              SizedBox(height: 8),
+                                              Text(
+                                                '4',
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                  fontFamily: 'Inter',
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                              SizedBox(height: 8),
+                                              Text(
+                                                '\$ 20 000',
+                                                style: TextStyle(
+                                                  color: Colors.black,
+                                                  fontSize: 14,
+                                                  fontFamily: 'Inter',
+                                                  fontWeight: FontWeight.w500,
+                                                ),
+                                              ),
+                                            ],
                                           ),
                                         ),
                                       ],
                                     ),
-                                  ),
-                                ],
+                                    const SizedBox(height: 16),
+                                    Container(
+                                      child: const Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            'Total',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 16,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w700,
+                                            ),
+                                          ),
+                                          SizedBox(width: 186),
+                                          Text(
+                                            '\$ 1 020 000',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 16,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w700,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),

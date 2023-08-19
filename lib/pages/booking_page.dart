@@ -13,7 +13,7 @@ class Booking extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 242, 243, 244),
+        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         title: const Text(
           'Booking Tour',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
@@ -28,7 +28,7 @@ class Booking extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30),
                 child: Container(
                   width: displayWidth,
-                  height: displayWidth * 1,
+                  
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -45,7 +45,7 @@ class Booking extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      // Add some spacing
+                      
 
                       // image
                       Image.asset(
@@ -55,238 +55,240 @@ class Booking extends StatelessWidget {
                       ),
 
                       const SizedBox(height: 20),
-                      Row(
-                        //text boxes and text fields
-
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(16.0),
-                            child: SizedBox(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Container(
-                                    width: displayWidth * .5,
-                                    padding: const EdgeInsets.only(
-                                      left: 16,
-                                    ),
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: ShapeDecoration(
-                                      color: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        side: const BorderSide(
-                                            width: 0.5,
-                                            color: Color(0x7F3951EE)),
-                                        borderRadius: BorderRadius.circular(12),
+                      FittedBox(
+                        child: Row(
+                          //text boxes and text fields
+                      
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(16.0),
+                              child: SizedBox(
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Container(
+                                      width: displayWidth * .5,
+                                      padding: const EdgeInsets.only(
+                                        left: 16,
                                       ),
-                                    ),
-                                    child: TextField(
-                                      // Replace Text with TextField
-                                      decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText:
-                                            'User Name', // Placeholder text
-                                        hintStyle: TextStyle(
-                                          color: Colors.black.withOpacity(0.5),
-                                          fontSize: 14,
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        color: Colors.white,
+                                        shape: RoundedRectangleBorder(
+                                          side: const BorderSide(
+                                              width: 0.5,
+                                              color: Color(0x7F3951EE)),
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                      ),
+                                      child: TextField(
+                                        // Replace Text with TextField
+                                        decoration: InputDecoration(
+                                          border: InputBorder.none,
+                                          hintText:
+                                              'User Name', // Placeholder text
+                                          hintStyle: TextStyle(
+                                            color: Colors.black.withOpacity(0.5),
+                                            fontSize: 14,
+                                            fontFamily: 'Inter',
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Container(
-                                    width: displayWidth * .5,
-                                    padding: const EdgeInsets.only(
-                                      left: 16,
-                                    ),
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: ShapeDecoration(
-                                      color: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        side: const BorderSide(
-                                            width: 0.5,
-                                            color: Color(0x7F3951EE)),
-                                        borderRadius: BorderRadius.circular(12),
+                                    const SizedBox(height: 10),
+                                    Container(
+                                      width: displayWidth * .5,
+                                      padding: const EdgeInsets.only(
+                                        left: 16,
                                       ),
-                                    ),
-                                    child: TextField(
-                                      // Replace Text with TextField
-                                      decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText:
-                                            'User Name', // Placeholder text
-                                        hintStyle: TextStyle(
-                                          color: Colors.black.withOpacity(0.5),
-                                          fontSize: 14,
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        color: Colors.white,
+                                        shape: RoundedRectangleBorder(
+                                          side: const BorderSide(
+                                              width: 0.5,
+                                              color: Color(0x7F3951EE)),
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                      ),
+                                      child: TextField(
+                                        // Replace Text with TextField
+                                        decoration: InputDecoration(
+                                          border: InputBorder.none,
+                                          hintText:
+                                              'User Name', // Placeholder text
+                                          hintStyle: TextStyle(
+                                            color: Colors.black.withOpacity(0.5),
+                                            fontSize: 14,
+                                            fontFamily: 'Inter',
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Container(
-                                    width: displayWidth * .5,
-                                    padding: const EdgeInsets.only(
-                                      left: 16,
-                                    ),
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: ShapeDecoration(
-                                      color: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        side: const BorderSide(
-                                            width: 0.5,
-                                            color: Color(0x7F3951EE)),
-                                        borderRadius: BorderRadius.circular(12),
+                                    const SizedBox(height: 10),
+                                    Container(
+                                      width: displayWidth * .5,
+                                      padding: const EdgeInsets.only(
+                                        left: 16,
                                       ),
-                                    ),
-                                    child: TextField(
-                                      // Replace Text with TextField
-                                      decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText:
-                                            'User Name', // Placeholder text
-                                        hintStyle: TextStyle(
-                                          color: Colors.black.withOpacity(0.5),
-                                          fontSize: 14,
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        color: Colors.white,
+                                        shape: RoundedRectangleBorder(
+                                          side: const BorderSide(
+                                              width: 0.5,
+                                              color: Color(0x7F3951EE)),
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                      ),
+                                      child: TextField(
+                                        // Replace Text with TextField
+                                        decoration: InputDecoration(
+                                          border: InputBorder.none,
+                                          hintText:
+                                              'User Name', // Placeholder text
+                                          hintStyle: TextStyle(
+                                            color: Colors.black.withOpacity(0.5),
+                                            fontSize: 14,
+                                            fontFamily: 'Inter',
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Container(
-                                    width: displayWidth * .5,
-                                    padding: const EdgeInsets.only(
-                                      left: 16,
-                                    ),
-                                    clipBehavior: Clip.antiAlias,
-                                    decoration: ShapeDecoration(
-                                      color: Colors.white,
-                                      shape: RoundedRectangleBorder(
-                                        side: const BorderSide(
-                                            width: 0.5,
-                                            color: Color(0x7F3951EE)),
-                                        borderRadius: BorderRadius.circular(12),
+                                    const SizedBox(height: 10),
+                                    Container(
+                                      width: displayWidth * .5,
+                                      padding: const EdgeInsets.only(
+                                        left: 16,
                                       ),
-                                    ),
-                                    child: TextField(
-                                      // Replace Text with TextField
-                                      decoration: InputDecoration(
-                                        border: InputBorder.none,
-                                        hintText:
-                                            'User Name', // Placeholder text
-                                        hintStyle: TextStyle(
-                                          color: Colors.black.withOpacity(0.5),
-                                          fontSize: 14,
-                                          fontFamily: 'Inter',
-                                          fontWeight: FontWeight.w400,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: ShapeDecoration(
+                                        color: Colors.white,
+                                        shape: RoundedRectangleBorder(
+                                          side: const BorderSide(
+                                              width: 0.5,
+                                              color: Color(0x7F3951EE)),
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                      ),
+                                      child: TextField(
+                                        // Replace Text with TextField
+                                        decoration: InputDecoration(
+                                          border: InputBorder.none,
+                                          hintText:
+                                              'User Name', // Placeholder text
+                                          hintStyle: TextStyle(
+                                            color: Colors.black.withOpacity(0.5),
+                                            fontSize: 14,
+                                            fontFamily: 'Inter',
+                                            fontWeight: FontWeight.w400,
+                                          ),
                                         ),
                                       ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-
-                          //text after the text fields
-
-                          const Padding(
-                            padding: EdgeInsets.all(16.0),
-                            child: SizedBox(
-                              width: 96,
-                              height: 150,
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text.rich(
-                                    TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: 'Departure\n',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 16,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w500,
+                      
+                            //text after the text fields
+                      
+                            const Padding(
+                              padding: EdgeInsets.all(16.0),
+                              child: SizedBox(
+                                width: 96,
+                                height: 150,
+                                child: Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'Departure\n',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 16,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                           ),
-                                        ),
-                                        TextSpan(
-                                          text: '15th Aug',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
+                                          TextSpan(
+                                            text: '15th Aug',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 14,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(height: 20),
-                                  Text.rich(
-                                    TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: 'Arrival\n',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 16,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w500,
+                                    SizedBox(height: 20),
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: 'Arrival\n',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 16,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                           ),
-                                        ),
-                                        TextSpan(
-                                          text: '25th Mar',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
+                                          TextSpan(
+                                            text: '25th Mar',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 14,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                  SizedBox(height: 20),
-                                  Text.rich(
-                                    TextSpan(
-                                      children: [
-                                        TextSpan(
-                                          text: '04\n',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 16,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w500,
+                                    SizedBox(height: 20),
+                                    Text.rich(
+                                      TextSpan(
+                                        children: [
+                                          TextSpan(
+                                            text: '04\n',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 16,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w500,
+                                            ),
                                           ),
-                                        ),
-                                        TextSpan(
-                                          text: 'Passengers',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w400,
+                                          TextSpan(
+                                            text: 'Passengers',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 14,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w400,
+                                            ),
                                           ),
-                                        ),
-                                      ],
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       )
                     ],
                   ),

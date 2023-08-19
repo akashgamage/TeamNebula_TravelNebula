@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/elysium_colony.dart';
+import 'package:travel_nebula/pages/my_account.dart';
+import 'package:travel_nebula/pages/notifications_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,90 +49,96 @@ class _HomePageState extends State<HomePage> {
             // Account button and notification button
             Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  InkWell(
-                    onTap: () {},
-                    child: Container(
-                      height: accountButtonHeight,
-                      width: displayWidth * 0.7,
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color.fromARGB(255, 1, 73, 255),
-                            Color.fromARGB(255, 162, 221, 255)
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                        borderRadius: BorderRadius.circular(100.0),
-                      ),
-                      child: const Row(
-                        children: [
-                          SizedBox(width: 10),
-                          CircleAvatar(
-                            radius: 30,
-                            backgroundImage:
-                                AssetImage('assets/images/profile.png'),
-                          ),
-                          SizedBox(width: 5),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10.0),
-                                child: Text(
-                                  'User Name',
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 10.0),
-                                child: Text(
-                                  'User ID: 123456',
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(width: spaceBetweenButtons),
-                  Material(
-                    elevation: 2.0,
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: InkWell(
-                      onTap: () {},
+              child: FittedBox(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => const MyAccountPage()));
+                      },
                       child: Container(
-                        width: accountButtonHeight,
                         height: accountButtonHeight,
+                        width: displayWidth * 0.7,
                         decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 255, 255, 255),
-                          borderRadius: BorderRadius.circular(20.0),
+                          gradient: const LinearGradient(
+                            colors: [
+                              Color.fromARGB(255, 1, 73, 255),
+                              Color.fromARGB(255, 162, 221, 255)
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(100.0),
                         ),
-                        child: const Center(
-                          child: ImageIcon(
-                            AssetImage('assets/images/bell.png'),
-                            color: Colors.blue,
-                            size: 32,
+                        child: const Row(
+                          children: [
+                            SizedBox(width: 10),
+                            CircleAvatar(
+                              radius: 30,
+                              backgroundImage:
+                                  AssetImage('assets/images/profile.png'),
+                            ),
+                            SizedBox(width: 5),
+                            Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                                  child: Text(
+                                    'User Name',
+                                    style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.symmetric(horizontal: 10.0),
+                                  child: Text(
+                                    'User ID: 123456',
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: spaceBetweenButtons),
+                    Material(
+                      elevation: 2.0,
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const NotificationsPage()));
+                        },
+                        child: Container(
+                          width: accountButtonHeight,
+                          height: accountButtonHeight,
+                          decoration: BoxDecoration(
+                            color: const Color.fromARGB(255, 255, 255, 255),
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: const Center(
+                            child: ImageIcon(
+                              AssetImage('assets/images/bell.png'),
+                              color: Colors.blue,
+                              size: 32,
+                            ),
                           ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
 

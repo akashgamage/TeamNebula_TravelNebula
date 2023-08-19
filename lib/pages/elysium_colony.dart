@@ -83,76 +83,78 @@ class _ElysiumColonyState extends State<ElysiumColony> {
               padding: EdgeInsets.all(displayWidth * .05),
               child: SizedBox(
                 width: displayWidth,
-                height: displayWidth * .62,
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.all(8),
-                          child: const Row(
-                            children: [
-                              Text(
-                                'Elysium Colony',
+                
+                child: FittedBox(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            padding: const EdgeInsets.all(8),
+                            child: const Row(
+                              children: [
+                                Text(
+                                  'Elysium Colony',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: 24,
+                                    fontFamily: 'Inter',
+                                    fontWeight: FontWeight.w800,
+                                    height: 1.10,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            width: 48,
+                            height: 48,
+                            decoration: ShapeDecoration(
+                              color: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                              ),
+                            ),
+                            child: const Center(
+                              child: Icon(
+                                Icons.bookmark,
+                                color: Color(0xFF3951EE),
+                                size: 32,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      const SizedBox(height: 5),
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: 370,
+                              child: Text(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tellus a ex finibus venenatis id non massa. Phasellus pretium lectus non velit mattis bibendum. Fusce quis sodales justo, id interdum nulla. In non risus ac nibh feugiat finibus. Vivamus est elit, suscipit vel lacinia et, iaculis ac ex. Sed in ipsum scelerisque, egestas ligula ac, condimentum metus. Etiam egestas ligula velit, vitae efficitur mauris tempus in. Donec ac eleifend elit.',
                                 style: TextStyle(
                                   color: Colors.black,
-                                  fontSize: 24,
+                                  fontSize: 16,
                                   fontFamily: 'Inter',
-                                  fontWeight: FontWeight.w800,
+                                  fontWeight: FontWeight.w400,
                                   height: 1.10,
                                 ),
                               ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
-                        Container(
-                          width: 48,
-                          height: 48,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                          ),
-                          child: const Center(
-                            child: Icon(
-                              Icons.bookmark,
-                              color: Color(0xFF3951EE),
-                              size: 32,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 5),
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      child: const Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 370,
-                            child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tellus a ex finibus venenatis id non massa. Phasellus pretium lectus non velit mattis bibendum. Fusce quis sodales justo, id interdum nulla. In non risus ac nibh feugiat finibus. Vivamus est elit, suscipit vel lacinia et, iaculis ac ex. Sed in ipsum scelerisque, egestas ligula ac, condimentum metus. Etiam egestas ligula velit, vitae efficitur mauris tempus in. Donec ac eleifend elit.',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w400,
-                                height: 1.10,
-                              ),
-                            ),
-                          ),
-                        ],
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -162,15 +164,178 @@ class _ElysiumColonyState extends State<ElysiumColony> {
               padding: EdgeInsets.all(displayWidth * .05),
               child: SizedBox(
                 width: displayWidth,
-                height: displayWidth * 0.2,
-                child: Column(
-                  children: [
-                    Transform(
-                      transform: Matrix4.identity()
-                        ..translate(0.0, 0.0)
-                        ..rotateZ(3.14),
-                      child: Container(
-                        width: 396,
+                
+                child: FittedBox(
+                  child: Column(
+                    children: [
+                      Transform(
+                        transform: Matrix4.identity()
+                          ..translate(0.0, 0.0)
+                          ..rotateZ(3.14),
+                        child: Container(
+                          width: 396,
+                          decoration: ShapeDecoration(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
+                            shadows: const [
+                              BoxShadow(
+                                color: Color(0x19000000),
+                                blurRadius: 10,
+                                offset: Offset(0, 1),
+                                spreadRadius: 0,
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 60,
+                                height: 60,
+                                child: Stack(
+                                  children: [
+                                    Container(
+                                      width: 60,
+                                      height: 60,
+                                      decoration: ShapeDecoration(
+                                        color: const Color(0xFF3951EE),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                      ),
+                                      child: const Center(
+                                        child: Icon(
+                                          Icons.access_time,
+                                          color: Colors.white,
+                                          size: 32, // Adjust the size as needed
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 16),
+                              const Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '7 months',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w700,
+                                      height: 1.10,
+                                    ),
+                                  ),
+                                  SizedBox(height: 3),
+                                  Text(
+                                    '24,600 mph',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.10,
+                                    ),
+                                  ),
+                                  SizedBox(height: 3),
+                                  Text(
+                                    '2 Space Stations',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.10,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              SizedBox(
+                                width: 60,
+                                height: 60,
+                                child: Stack(
+                                  children: [
+                                    // Ratings Container
+                                    Container(
+                                      width: 60,
+                                      height: 60,
+                                      decoration: ShapeDecoration(
+                                        color: const Color(0xFF3951EE),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(12),
+                                        ),
+                                      ),
+                                      child: const Center(
+                                        child: Icon(
+                                          Icons.star,
+                                          color: Colors.white,
+                                          size: 32, // Adjust the size as needed
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              const SizedBox(width: 16),
+                              const Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    '4.5 / 5.0',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 18,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w700,
+                                      height: 1.10,
+                                    ),
+                                  ),
+                                  SizedBox(height: 3),
+                                  Text(
+                                    '5 643 Reviews',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.10,
+                                    ),
+                                  ),
+                                  SizedBox(height: 3),
+                                  Text(
+                                    '2 465 Saves',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontSize: 14,
+                                      fontFamily: 'Inter',
+                                      fontWeight: FontWeight.w500,
+                                      height: 1.10,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 24),
+                      Container(
+                        width: displayWidth,
                         decoration: ShapeDecoration(
                           color: Colors.white,
                           shape: RoundedRectangleBorder(
@@ -184,171 +349,10 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                             )
                           ],
                         ),
+                        child: const Stack(children: []),
                       ),
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 60,
-                              height: 60,
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    width: 60,
-                                    height: 60,
-                                    decoration: ShapeDecoration(
-                                      color: const Color(0xFF3951EE),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                    ),
-                                    child: const Center(
-                                      child: Icon(
-                                        Icons.access_time,
-                                        color: Colors.white,
-                                        size: 32, // Adjust the size as needed
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 16),
-                            const Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '7 months',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontFamily: 'Inter',
-                                    fontWeight: FontWeight.w700,
-                                    height: 1.10,
-                                  ),
-                                ),
-                                SizedBox(height: 3),
-                                Text(
-                                  '24,600 mph',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 14,
-                                    fontFamily: 'Inter',
-                                    fontWeight: FontWeight.w500,
-                                    height: 1.10,
-                                  ),
-                                ),
-                                SizedBox(height: 3),
-                                Text(
-                                  '2 Space Stations',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 14,
-                                    fontFamily: 'Inter',
-                                    fontWeight: FontWeight.w500,
-                                    height: 1.10,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            SizedBox(
-                              width: 60,
-                              height: 60,
-                              child: Stack(
-                                children: [
-                                  // Ratings Container
-                                  Container(
-                                    width: 60,
-                                    height: 60,
-                                    decoration: ShapeDecoration(
-                                      color: const Color(0xFF3951EE),
-                                      shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadius.circular(12),
-                                      ),
-                                    ),
-                                    child: const Center(
-                                      child: Icon(
-                                        Icons.star,
-                                        color: Colors.white,
-                                        size: 32, // Adjust the size as needed
-                                      ),
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 16),
-                            const Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '4.5 / 5.0',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 18,
-                                    fontFamily: 'Inter',
-                                    fontWeight: FontWeight.w700,
-                                    height: 1.10,
-                                  ),
-                                ),
-                                SizedBox(height: 3),
-                                Text(
-                                  '5 643 Reviews',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 14,
-                                    fontFamily: 'Inter',
-                                    fontWeight: FontWeight.w500,
-                                    height: 1.10,
-                                  ),
-                                ),
-                                SizedBox(height: 3),
-                                Text(
-                                  '2 465 Saves',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 14,
-                                    fontFamily: 'Inter',
-                                    fontWeight: FontWeight.w500,
-                                    height: 1.10,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 24),
-                    Container(
-                      width: displayWidth,
-                      decoration: ShapeDecoration(
-                        color: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                        shadows: const [
-                          BoxShadow(
-                            color: Color(0x19000000),
-                            blurRadius: 10,
-                            offset: Offset(0, 1),
-                            spreadRadius: 0,
-                          )
-                        ],
-                      ),
-                      child: const Stack(children: []),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -358,7 +362,7 @@ class _ElysiumColonyState extends State<ElysiumColony> {
               padding: EdgeInsets.all(displayWidth * .05),
               child: SizedBox(
                 width: displayWidth,
-                height: displayWidth * 0.75,
+                
                 child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -379,7 +383,7 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                         children: [
                           Container(
                             width: displayWidth,
-                            height: displayWidth * 0.65,
+                            
                             decoration: ShapeDecoration(
                               color: Colors.white,
                               shape: RoundedRectangleBorder(
@@ -397,349 +401,351 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                             child: const Padding(
                               padding: EdgeInsets.all(20.0),
                               child: Column(children: [
-                                Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          '15th August',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w600,
-                                          ),
-                                        ),
-                                        SizedBox(width: 48),
-                                        SizedBox(
-                                          width: 171,
-                                          child: Text.rich(
-                                            TextSpan(
-                                              children: [
-                                                TextSpan(
-                                                  text: 'Departure at',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 12,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w400,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' \n',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'NebulaX',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'Station ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'Los Alamos ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 10,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ),
-                                              ],
+                                FittedBox(
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            '15th August',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 14,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w600,
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 22),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          '3rd October',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                        SizedBox(width: 48),
-                                        SizedBox(
-                                          width: 185,
-                                          height: 49,
-                                          child: Text.rich(
-                                            TextSpan(
-                                              children: [
-                                                TextSpan(
-                                                  text: 'Space',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
+                                          SizedBox(width: 48),
+                                          SizedBox(
+                                            width: 171,
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: 'Departure at',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 12,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w400,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
+                                                  TextSpan(
+                                                    text: ' \n',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'Station ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
+                                                  TextSpan(
+                                                    text: 'NebulaX',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'I',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily:
-                                                        'Iowan Old Style',
-                                                    fontWeight: FontWeight.w700,
+                                                  TextSpan(
+                                                    text: ' ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' \n',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
+                                                  TextSpan(
+                                                    text: 'Station ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text:
-                                                      '38.5 million km away to Mars\n16.4 million km away from Earth\n',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 12,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
+                                                  TextSpan(
+                                                    text: 'Los Alamos ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 10,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 22),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          '7th January',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                        SizedBox(width: 48),
-                                        SizedBox(
-                                          width: 185,
-                                          height: 49,
-                                          child: Text.rich(
-                                            TextSpan(
-                                              children: [
-                                                TextSpan(
-                                                  text: 'Space',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'Station ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'II',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily:
-                                                        'Iowan Old Style',
-                                                    fontWeight: FontWeight.w700,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' \n',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
-                                                  ),
-                                                ),
-                                                TextSpan(
-                                                  text:
-                                                      '18.2 million km away to Mars\n36.7 million km away from Earth\n',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 12,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ),
-                                              ],
+                                        ],
+                                      ),
+                                      SizedBox(height: 22),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            '3rd October',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 14,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w500,
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 22),
-                                    Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.start,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      children: [
-                                        Text(
-                                          '25th March',
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 14,
-                                            fontFamily: 'Inter',
-                                            fontWeight: FontWeight.w500,
-                                          ),
-                                        ),
-                                        SizedBox(width: 48),
-                                        SizedBox(
-                                          width: 171,
-                                          child: Text.rich(
-                                            TextSpan(
-                                              children: [
-                                                TextSpan(
-                                                  text: 'Arrival to',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 12,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w400,
+                                          SizedBox(width: 48),
+                                          SizedBox(
+                                            width: 185,
+                                            height: 49,
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: 'Space',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' \n',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
+                                                  TextSpan(
+                                                    text: ' ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'NebulaX',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
+                                                  TextSpan(
+                                                    text: 'Station ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: ' ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
+                                                  TextSpan(
+                                                    text: 'I',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily:
+                                                          'Iowan Old Style',
+                                                      fontWeight: FontWeight.w700,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'Station ',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 14,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w600,
+                                                  TextSpan(
+                                                    text: ' \n',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
                                                   ),
-                                                ),
-                                                TextSpan(
-                                                  text: 'Elysium',
-                                                  style: TextStyle(
-                                                    color: Colors.black,
-                                                    fontSize: 10,
-                                                    fontFamily: 'Inter',
-                                                    fontWeight: FontWeight.w500,
+                                                  TextSpan(
+                                                    text:
+                                                        '38.5 million km away to Mars\n16.4 million km away from Earth\n',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 12,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
                                                   ),
-                                                ),
-                                              ],
+                                                ],
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
+                                        ],
+                                      ),
+                                      SizedBox(height: 22),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            '7th January',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 14,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                          SizedBox(width: 48),
+                                          SizedBox(
+                                            width: 185,
+                                            height: 49,
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: 'Space',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: ' ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: 'Station ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: 'II',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily:
+                                                          'Iowan Old Style',
+                                                      fontWeight: FontWeight.w700,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: ' \n',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text:
+                                                        '18.2 million km away to Mars\n36.7 million km away from Earth\n',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 12,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(height: 22),
+                                      Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.start,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            '25th March',
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 14,
+                                              fontFamily: 'Inter',
+                                              fontWeight: FontWeight.w500,
+                                            ),
+                                          ),
+                                          SizedBox(width: 48),
+                                          SizedBox(
+                                            width: 171,
+                                            child: Text.rich(
+                                              TextSpan(
+                                                children: [
+                                                  TextSpan(
+                                                    text: 'Arrival to',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 12,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w400,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: ' \n',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: 'NebulaX',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: ' ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: 'Station ',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 14,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w600,
+                                                    ),
+                                                  ),
+                                                  TextSpan(
+                                                    text: 'Elysium',
+                                                    style: TextStyle(
+                                                      color: Colors.black,
+                                                      fontSize: 10,
+                                                      fontFamily: 'Inter',
+                                                      fontWeight: FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ]),
                             ),
@@ -829,7 +835,7 @@ class _ElysiumColonyState extends State<ElysiumColony> {
               padding: EdgeInsets.all(displayWidth * .05),
               child: SizedBox(
                 width: displayWidth,
-                height: displayWidth * .8,
+                
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -860,27 +866,32 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                     const SizedBox(height: 5),
                     Container(
                       padding: const EdgeInsets.all(8),
-                      child: const Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            width: 370,
-                            child: Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tellus a ex finibus venenatis id non massa. Phasellus pretium lectus non velit mattis bibendum. Fusce quis sodales justo, id interdum nulla. In non risus ac nibh feugiat finibus. Vivamus est elit, suscipit vel lacinia et, iaculis ac ex. Sed in ipsum scelerisque, egestas ligula ac, condimentum metus. Etiam egestas ligula velit, vitae efficitur mauris tempus in. Donec ac eleifend elit.',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 16,
-                                fontFamily: 'Inter',
-                                fontWeight: FontWeight.w400,
-                                height: 1.10,
+                      child: const FittedBox(
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: 370,
+                              child: Text(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut tellus a ex finibus venenatis id non massa. Phasellus pretium lectus non velit mattis bibendum. Fusce quis sodales justo, id interdum nulla. In non risus ac nibh feugiat finibus. Vivamus est elit, suscipit vel lacinia et, iaculis ac ex. Sed in ipsum scelerisque, egestas ligula ac, condimentum metus. Etiam egestas ligula velit, vitae efficitur mauris tempus in. Donec ac eleifend elit.',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                  fontFamily: 'Inter',
+                                  fontWeight: FontWeight.w400,
+                                  height: 1.10,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
+                    Container(
+                      height: displayWidth * .3,
+                    )
                   ],
                 ),
               ),
