@@ -1,9 +1,31 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/bottom_navbar.dart';
 import 'package:travel_nebula/pages/signup_page.dart';
 
+@override
+SignInPage createState() => SignInPage();
+
 class SignInPage extends StatelessWidget {
   SignInPage({super.key});
+
+  Future<User?> Signin() async {
+    final FirebaseAuth _auth = FirebaseAuth.instance;
+    final User? user;
+    try {
+      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+          email: idcontroller.text, password: pwcontroller.text);
+      user = userCredential.user;
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        print('No user found for that email.');
+        return null;
+      } else if (e.code == 'wrong-password') {
+        print('Wrong password provided for that user.');
+        return null;
+      }
+    }
+  }
 
   final idcontroller = TextEditingController();
   final pwcontroller = TextEditingController();
