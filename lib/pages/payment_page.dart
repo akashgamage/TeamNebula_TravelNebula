@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/bottom_navbar.dart';
+import 'package:travel_nebula/pages/payment_verification.dart';
 
+import 'bank_card.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
@@ -11,14 +13,15 @@ class Payment extends StatefulWidget {
 
 class _PaymentState extends State<Payment> {
   int selectedPaymentMethod = 1; // 0: None, 1: Credit Card, 2: Bank Transfer
-
+  BankCard? selectedCard;
+  Bank? selectedBank;
   @override
   Widget build(BuildContext context) {
     double displayWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         title: const Text(
           'Make Payment',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
@@ -33,7 +36,6 @@ class _PaymentState extends State<Payment> {
                     horizontal: 20.0, vertical: 30.0),
                 child: Container(
                   width: displayWidth,
-                  
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -50,8 +52,6 @@ class _PaymentState extends State<Payment> {
                   ),
                   child: Column(
                     children: [
-                      
-
                       Image.asset(
                         'assets/images/elysiumbooking.png',
                         width: displayWidth,
@@ -237,9 +237,11 @@ class _PaymentState extends State<Payment> {
                                 // Handle radio button selection
                                 setState(() {
                                   selectedPaymentMethod = value ?? 0;
+                                  selectedCard = null; // Reset selected card
+                                  selectedBank = null; // Reset selected bank
                                 });
                               },
-                              activeColor: Color.fromARGB(255, 234, 6, 6),
+                              activeColor: const Color.fromARGB(255, 234, 6, 6),
                             ),
                             Text(
                               'Credit Card',
@@ -261,6 +263,8 @@ class _PaymentState extends State<Payment> {
                                 // Handle radio button selection
                                 setState(() {
                                   selectedPaymentMethod = value ?? 0;
+                                  selectedCard = null; // Reset selected card
+                                  selectedBank = null; // Reset selected bank
                                 });
                               },
                             ),
@@ -336,10 +340,24 @@ class _PaymentState extends State<Payment> {
                   // Book Your Tour Button (Gradient Button)
                   InkWell(
                     onTap: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Payment()));
+                       // Handle second button tap here
+                        if (selectedImage.isEmpty) {
+                          // Display an error message if no card is selected
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                                content: Text(
+                                    'Please select a card/bank before making payment.')),
+                          );
+                        } else {
+                          // Proceed to the Verification screen
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Verification(
+                                      selectedCard: selectedCard, selectedBank: selectedBank,
+                                    )),
+                          );
+                        }
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -408,6 +426,8 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/card3.png";
                 });
+                 selectedCard =
+                    BankCard("images/card3.png"); // Store selected card
               },
             ),
             _SelectableImage(
@@ -417,6 +437,8 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/card2.png";
                 });
+                 selectedCard =
+                    BankCard("images/card2.png"); // Store selected card
               },
             ),
             _SelectableImage(
@@ -426,6 +448,8 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/card1.png";
                 });
+                 selectedCard =
+                    BankCard("images/card1.png"); // Store selected card
               },
             ),
           ],
@@ -453,6 +477,7 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/Bank2.png";
                 });
+                 selectedBank = Bank("images/Bank2.png");
               },
             ),
             const SizedBox(width: 20),
@@ -463,6 +488,7 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/Bank3.png";
                 });
+                 selectedBank = Bank("images/Bank3.png");
               },
             ),
           ],
