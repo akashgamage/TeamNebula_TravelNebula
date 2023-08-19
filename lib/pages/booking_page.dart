@@ -18,6 +18,7 @@ class Booking extends StatelessWidget {
           'Booking Tour',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         ),
+        iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Stack(
         children: [
@@ -28,7 +29,6 @@ class Booking extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 20.0, vertical: 30),
                 child: Container(
                   width: displayWidth,
-                  
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
@@ -45,8 +45,6 @@ class Booking extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      
-
                       // image
                       Image.asset(
                         'assets/images/elysiumbooking.png',
@@ -58,7 +56,7 @@ class Booking extends StatelessWidget {
                       FittedBox(
                         child: Row(
                           //text boxes and text fields
-                      
+
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Padding(
@@ -81,7 +79,8 @@ class Booking extends StatelessWidget {
                                           side: const BorderSide(
                                               width: 0.5,
                                               color: Color(0x7F3951EE)),
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                       ),
                                       child: TextField(
@@ -91,7 +90,8 @@ class Booking extends StatelessWidget {
                                           hintText:
                                               'User Name', // Placeholder text
                                           hintStyle: TextStyle(
-                                            color: Colors.black.withOpacity(0.5),
+                                            color:
+                                                Colors.black.withOpacity(0.5),
                                             fontSize: 14,
                                             fontFamily: 'Inter',
                                             fontWeight: FontWeight.w400,
@@ -112,7 +112,8 @@ class Booking extends StatelessWidget {
                                           side: const BorderSide(
                                               width: 0.5,
                                               color: Color(0x7F3951EE)),
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                       ),
                                       child: TextField(
@@ -122,7 +123,8 @@ class Booking extends StatelessWidget {
                                           hintText:
                                               'User Name', // Placeholder text
                                           hintStyle: TextStyle(
-                                            color: Colors.black.withOpacity(0.5),
+                                            color:
+                                                Colors.black.withOpacity(0.5),
                                             fontSize: 14,
                                             fontFamily: 'Inter',
                                             fontWeight: FontWeight.w400,
@@ -143,7 +145,8 @@ class Booking extends StatelessWidget {
                                           side: const BorderSide(
                                               width: 0.5,
                                               color: Color(0x7F3951EE)),
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                       ),
                                       child: TextField(
@@ -153,7 +156,8 @@ class Booking extends StatelessWidget {
                                           hintText:
                                               'User Name', // Placeholder text
                                           hintStyle: TextStyle(
-                                            color: Colors.black.withOpacity(0.5),
+                                            color:
+                                                Colors.black.withOpacity(0.5),
                                             fontSize: 14,
                                             fontFamily: 'Inter',
                                             fontWeight: FontWeight.w400,
@@ -174,7 +178,8 @@ class Booking extends StatelessWidget {
                                           side: const BorderSide(
                                               width: 0.5,
                                               color: Color(0x7F3951EE)),
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                       ),
                                       child: TextField(
@@ -184,7 +189,8 @@ class Booking extends StatelessWidget {
                                           hintText:
                                               'User Name', // Placeholder text
                                           hintStyle: TextStyle(
-                                            color: Colors.black.withOpacity(0.5),
+                                            color:
+                                                Colors.black.withOpacity(0.5),
                                             fontSize: 14,
                                             fontFamily: 'Inter',
                                             fontWeight: FontWeight.w400,
@@ -196,9 +202,9 @@ class Booking extends StatelessWidget {
                                 ),
                               ),
                             ),
-                      
+
                             //text after the text fields
-                      
+
                             const Padding(
                               padding: EdgeInsets.all(16.0),
                               child: SizedBox(

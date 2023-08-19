@@ -26,6 +26,7 @@ class _PaymentState extends State<Payment> {
           'Make Payment',
           style: TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
         ),
+        iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Stack(
         children: [
@@ -340,24 +341,25 @@ class _PaymentState extends State<Payment> {
                   // Book Your Tour Button (Gradient Button)
                   InkWell(
                     onTap: () {
-                       // Handle second button tap here
-                        if (selectedImage.isEmpty) {
-                          // Display an error message if no card is selected
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                                content: Text(
-                                    'Please select a card/bank before making payment.')),
-                          );
-                        } else {
-                          // Proceed to the Verification screen
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Verification(
-                                      selectedCard: selectedCard, selectedBank: selectedBank,
-                                    )),
-                          );
-                        }
+                      // Handle second button tap here
+                      if (selectedImage.isEmpty) {
+                        // Display an error message if no card is selected
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                              content: Text(
+                                  'Please select a card/bank before making payment.')),
+                        );
+                      } else {
+                        // Proceed to the Verification screen
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Verification(
+                                    selectedCard: selectedCard,
+                                    selectedBank: selectedBank,
+                                  )),
+                        );
+                      }
                     },
                     child: Container(
                       decoration: BoxDecoration(
@@ -426,8 +428,8 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/card3.png";
                 });
-                 selectedCard =
-                    BankCard("images/card3.png"); // Store selected card
+                selectedCard =
+                    BankCard("assets/images/card3.png"); // Store selected card
               },
             ),
             _SelectableImage(
@@ -437,8 +439,8 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/card2.png";
                 });
-                 selectedCard =
-                    BankCard("images/card2.png"); // Store selected card
+                selectedCard =
+                    BankCard("assets/images/card2.png"); // Store selected card
               },
             ),
             _SelectableImage(
@@ -448,8 +450,8 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/card1.png";
                 });
-                 selectedCard =
-                    BankCard("images/card1.png"); // Store selected card
+                selectedCard =
+                    BankCard("assets/images/card1.png"); // Store selected card
               },
             ),
           ],
@@ -477,7 +479,7 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/Bank2.png";
                 });
-                 selectedBank = Bank("images/Bank2.png");
+                selectedBank = Bank("assets/images/Bank2.png");
               },
             ),
             const SizedBox(width: 20),
@@ -488,7 +490,7 @@ class _PaymentState extends State<Payment> {
                 setState(() {
                   selectedImage = "assets/images/Bank3.png";
                 });
-                 selectedBank = Bank("images/Bank3.png");
+                selectedBank = Bank("assets/images/Bank3.png");
               },
             ),
           ],
