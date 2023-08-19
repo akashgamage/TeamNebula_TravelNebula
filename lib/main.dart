@@ -1,3 +1,4 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/booking_page.dart';
 import 'package:travel_nebula/pages/elysium_colony.dart';
@@ -13,7 +14,13 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      // Wrap your app with DevicePreview
+      enabled: true, // Set to true to enable device preview
+      builder: (context) => const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
