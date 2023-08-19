@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/booking_page.dart';
-import 'package:travel_nebula/pages/home_page.dart';
+import 'package:travel_nebula/pages/bottom_navbar.dart';
 
 class ElysiumColony extends StatefulWidget {
   const ElysiumColony({super.key});
@@ -913,7 +913,7 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const HomePage()));
+                            builder: (context) => const NavBar()));
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,

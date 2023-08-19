@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travel_nebula/pages/bottom_navbar.dart';
 
-import 'home_page.dart';
 
 class Payment extends StatefulWidget {
   const Payment({Key? key}) : super(key: key);
@@ -311,7 +311,7 @@ class _PaymentState extends State<Payment> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomePage()));
+                              builder: (context) => const NavBar()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,

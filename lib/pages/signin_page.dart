@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:travel_nebula/pages/home_page.dart';
+import 'package:travel_nebula/pages/bottom_navbar.dart';
 import 'package:travel_nebula/pages/signup_page.dart';
 
 class SignInPage extends StatelessWidget {
@@ -122,7 +122,7 @@ class SignInPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const HomePage()));
+                          builder: (context) => const NavBar()));
                 },
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(500, 64),

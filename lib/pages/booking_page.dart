@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travel_nebula/pages/bottom_navbar.dart';
 
 import 'package:travel_nebula/pages/payment_page.dart';
-import 'package:travel_nebula/pages/home_page.dart';
 
 class Booking extends StatelessWidget {
   const Booking({super.key});
@@ -457,7 +457,7 @@ class Booking extends StatelessWidget {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomePage()));
+                              builder: (context) => const NavBar()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
