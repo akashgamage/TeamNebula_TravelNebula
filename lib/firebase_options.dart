@@ -55,7 +55,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCHs493yNWhNNPwo7nRBm9EZT_I6Re2GBU',
-    appId: '1:118109128001:android:fb1c9b9aad96aec0b20dc0',
+    appId: '1:118109128001:android:c641b5e3efde3c82b20dc0',
     messagingSenderId: '118109128001',
     projectId: 'nebula-55342',
     storageBucket: 'nebula-55342.appspot.com',

@@ -26,6 +26,8 @@ class _SignInPageState extends State<SignInPage> {
       user = userCredential.user;
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => Booking()));
+
+      return user;
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
