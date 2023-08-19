@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:travel_nebula/pages/my_account.dart';
 import 'home_page.dart';
+import 'my_bookings.dart';
+import 'my_saves.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -164,9 +167,9 @@ class NavBarState extends State<NavBar> {
 
   List<Widget> screens = [
     const HomePage(),
-    // MyBookingsPage(),
-    // MySavesPage(),
-    // MyProfilePage(),
+    const MyBookingsPage(),
+    const MySavesPage(),
+    const MyAccountPage(),
   ];
 
   final PageController _pageController = PageController();

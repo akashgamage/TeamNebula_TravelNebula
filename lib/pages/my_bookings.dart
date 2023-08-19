@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyBookingsPage extends MyBookingsPage {
+class MyBookingsPage extends StatelessWidget {
   const MyBookingsPage({super.key});
 
   @override
