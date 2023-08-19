@@ -305,7 +305,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            // 4 slide buttons for departments
+            // Best destinations container
             Padding(
               padding: EdgeInsets.symmetric(vertical: displayWidth * .05),
               child: Container(
@@ -410,13 +410,13 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Padding(
-                              padding: EdgeInsets.only(top: displayWidth * .01),
-                              child: TextButton.icon(
-                                onPressed: () {},
-                                style: ButtonStyle(),
-                                label: Text("Next"),
-                                icon: Icon(Icons.arrow_forward_ios_rounded),
-                              )),
+                            padding: EdgeInsets.only(top: displayWidth * .01),
+                            child: TextButton(
+                              onPressed: () {},
+                              style: ButtonStyle(),
+                              child: Text("More"),
+                            ),
+                          )
                         ],
                       ),
                     ),
