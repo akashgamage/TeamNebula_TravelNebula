@@ -1,21 +1,31 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:travel_nebula/pages/booking_page.dart';
 import 'package:travel_nebula/pages/bottom_navbar.dart';
 import 'package:travel_nebula/pages/signup_page.dart';
 
 @override
 SignInPage createState() => SignInPage();
 
-class SignInPage extends StatelessWidget {
+class SignInPage extends StatefulWidget {
   SignInPage({super.key});
 
-  Future<User?> Signin() async {
-    final FirebaseAuth _auth = FirebaseAuth.instance;
-    final User? user;
+  @override
+  State<SignInPage> createState() => _SignInPageState();
+}
+
+class _SignInPageState extends State<SignInPage> {
+  Future<User?> Signin(
+      {required String email, required String password}) async {
+    FirebaseAuth auth = FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: email, password: password) as FirebaseAuth;
+    User? user;
     try {
-      UserCredential userCredential = await _auth.signInWithEmailAndPassword(
+      UserCredential userCredential = await auth.signInWithEmailAndPassword(
           email: idcontroller.text, password: pwcontroller.text);
       user = userCredential.user;
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => Booking()));
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
@@ -28,6 +38,7 @@ class SignInPage extends StatelessWidget {
   }
 
   final idcontroller = TextEditingController();
+
   final pwcontroller = TextEditingController();
 
   @override
@@ -147,11 +158,11 @@ class SignInPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const NavBar()));
+                  onPressed: () async {
+                    await Signin(
+                      email: idcontroller.text,
+                      password: pwcontroller.text,
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     fixedSize: const Size(500, 64),
