@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/signin_page.dart';
 
-class SignUpPage extends StatelessWidget {
-  SignUpPage({super.key});
+class SignUpPage extends StatefulWidget {
+  SignUpPage({Key? key}) : super(key: key);
 
+  @override
+  _SignUpPageState createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
   final idcontroller = TextEditingController();
   final pwcontroller = TextEditingController();
+  bool _obscureText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -95,12 +101,23 @@ class SignUpPage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: TextField(
                 controller: pwcontroller,
+                obscureText: _obscureText,
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    hintText: 'Password',
-                    hintStyle:
-                        const TextStyle(color: Colors.grey, fontSize: 20)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  hintText: 'Password',
+                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 20),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                        _obscureText ? Icons.visibility : Icons.visibility_off),
+                    onPressed: () {
+                      setState(() {
+                        _obscureText =
+                            !_obscureText; // Toggle the password visibility
+                      });
+                    },
+                  ),
+                ),
               ),
             ),
             const SizedBox(
@@ -110,12 +127,23 @@ class SignUpPage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: TextField(
                 controller: pwcontroller,
+                obscureText: _obscureText,
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    hintText: 'Re-enter Password',
-                    hintStyle:
-                        const TextStyle(color: Colors.grey, fontSize: 20)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  hintText: 'Re-enter Password',
+                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 20),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                        _obscureText ? Icons.visibility : Icons.visibility_off),
+                    onPressed: () {
+                      setState(() {
+                        _obscureText =
+                            !_obscureText; // Toggle the password visibility
+                      });
+                    },
+                  ),
+                ),
               ),
             ),
             const SizedBox(

@@ -228,7 +228,7 @@ class Booking extends StatelessWidget {
                                             ),
                                           ),
                                           TextSpan(
-                                            text: '15th Aug',
+                                            text: '27th Aug',
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 14,

@@ -10,7 +10,6 @@ class ElysiumColony extends StatefulWidget {
 }
 
 class _ElysiumColonyState extends State<ElysiumColony> {
-
   int _selectedImageIndex = 0;
   final List<String> _imageUrls = [
     'assets/images/gallery1.png',
@@ -31,59 +30,57 @@ class _ElysiumColonyState extends State<ElysiumColony> {
           children: [
             // Image container
             Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              height: 450,
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(_imageUrls[_selectedImageIndex],
-                      fit: BoxFit.cover),
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: 450,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(_imageUrls[_selectedImageIndex],
+                        fit: BoxFit.cover),
+                  ),
                 ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: SizedBox(
-              height: 100,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: _imageUrls.length,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        _selectedImageIndex = index;
-                      });
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(8),
-                      child: SizedBox(
-                        width: 80,
-                        height: 80,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(
-                              10), // Adjust the radius as needed
-                          child:
-                              Image.asset(_imageUrls[index], fit: BoxFit.cover),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: SizedBox(
+                height: 100,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: _imageUrls.length,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          _selectedImageIndex = index;
+                        });
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: SizedBox(
+                          width: 80,
+                          height: 80,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(
+                                10), // Adjust the radius as needed
+                            child: Image.asset(_imageUrls[index],
+                                fit: BoxFit.cover),
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ),
-          ),
-
 
             // Description container
             Padding(
               padding: EdgeInsets.all(displayWidth * .05),
               child: SizedBox(
                 width: displayWidth,
-                
                 child: FittedBox(
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
@@ -164,7 +161,6 @@ class _ElysiumColonyState extends State<ElysiumColony> {
               padding: EdgeInsets.all(displayWidth * .05),
               child: SizedBox(
                 width: displayWidth,
-                
                 child: FittedBox(
                   child: Column(
                     children: [
@@ -205,7 +201,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                       decoration: ShapeDecoration(
                                         color: const Color(0xFF3951EE),
                                         shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                       ),
                                       child: const Center(
@@ -261,6 +258,7 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                               ),
                             ],
                           ),
+                          const SizedBox(width: 50),
                           Row(
                             children: [
                               SizedBox(
@@ -275,7 +273,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                       decoration: ShapeDecoration(
                                         color: const Color(0xFF3951EE),
                                         shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(12),
+                                          borderRadius:
+                                              BorderRadius.circular(12),
                                         ),
                                       ),
                                       child: const Center(
@@ -362,7 +361,6 @@ class _ElysiumColonyState extends State<ElysiumColony> {
               padding: EdgeInsets.all(displayWidth * .05),
               child: SizedBox(
                 width: displayWidth,
-                
                 child: Column(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -383,7 +381,6 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                         children: [
                           Container(
                             width: displayWidth,
-                            
                             decoration: ShapeDecoration(
                               color: Colors.white,
                               shape: RoundedRectangleBorder(
@@ -405,7 +402,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                   child: Column(
                                     mainAxisSize: MainAxisSize.min,
                                     mainAxisAlignment: MainAxisAlignment.start,
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       Row(
                                         mainAxisSize: MainAxisSize.min,
@@ -415,7 +413,7 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            '15th August',
+                                            '27th August',
                                             style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 14,
@@ -435,7 +433,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 12,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w400,
+                                                      fontWeight:
+                                                          FontWeight.w400,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -444,7 +443,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -453,7 +453,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -462,7 +463,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -471,7 +473,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -480,7 +483,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 10,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                 ],
@@ -519,7 +523,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -528,7 +533,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -537,7 +543,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -547,7 +554,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       fontSize: 14,
                                                       fontFamily:
                                                           'Iowan Old Style',
-                                                      fontWeight: FontWeight.w700,
+                                                      fontWeight:
+                                                          FontWeight.w700,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -556,7 +564,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -566,7 +575,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 12,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                 ],
@@ -605,7 +615,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -614,7 +625,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -623,7 +635,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -633,7 +646,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       fontSize: 14,
                                                       fontFamily:
                                                           'Iowan Old Style',
-                                                      fontWeight: FontWeight.w700,
+                                                      fontWeight:
+                                                          FontWeight.w700,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -642,7 +656,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -652,7 +667,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 12,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                 ],
@@ -690,7 +706,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 12,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w400,
+                                                      fontWeight:
+                                                          FontWeight.w400,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -699,7 +716,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -708,7 +726,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -717,7 +736,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -726,7 +746,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 14,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w600,
+                                                      fontWeight:
+                                                          FontWeight.w600,
                                                     ),
                                                   ),
                                                   TextSpan(
@@ -735,7 +756,8 @@ class _ElysiumColonyState extends State<ElysiumColony> {
                                                       color: Colors.black,
                                                       fontSize: 10,
                                                       fontFamily: 'Inter',
-                                                      fontWeight: FontWeight.w500,
+                                                      fontWeight:
+                                                          FontWeight.w500,
                                                     ),
                                                   ),
                                                 ],
@@ -835,7 +857,6 @@ class _ElysiumColonyState extends State<ElysiumColony> {
               padding: EdgeInsets.all(displayWidth * .05),
               child: SizedBox(
                 width: displayWidth,
-                
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   mainAxisAlignment: MainAxisAlignment.start,
