@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/booking_page.dart';
@@ -20,7 +21,7 @@ void main() async {
   runApp(
     DevicePreview(
       // Wrap your app with DevicePreview
-      enabled: true, // Set to true to enable device preview
+      enabled: !true, // Set to true to enable device preview
       builder: (context) => const MyApp(),
     ),
   );
@@ -34,7 +35,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignInPage(),
+      home: AnimatedSplashScreen(
+        splash: Image.asset(
+          'assets/images/nebulalogo.png',
+        ),
+        nextScreen: SignInPage(),
+        splashTransition: SplashTransition.slideTransition,
+        duration: 2000,
+      ),
     );
   }
 }
