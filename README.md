@@ -8,9 +8,10 @@ Welcome to the **Travel Nebula** repository! This project is a Flutter applicati
 ## Table of Contents
 
 - [Features](#features)
-- [Screenshots](#screenshots)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Screenshots](#screenshots)
+- [YouTube Video](#YouTube-Video)
 - [Technologies Used](#technologies-used)
 - [Contributors](#contributors)
 - [About Rootcode Tech-Triathlon](#about-rootcode-tech-triathlon)
@@ -24,11 +25,6 @@ Welcome to the **Travel Nebula** repository! This project is a Flutter applicati
 - Enjoy a user-friendly interface built with Flutter's engaging UI toolkit.
 - Leverage Firebase backend for real-time data synchronization.
 
-## Screenshots
-
-<!-- Insert captivating screenshots of the app here -->
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
 
 ## Installation
 
@@ -62,6 +58,16 @@ Welcome to the **Travel Nebula** repository! This project is a Flutter applicati
 
 3. Explore the app, discover mesmerizing travel spots, and start planning your next adventure!
 
+## Screenshots
+
+<!-- Insert captivating screenshots of the app here -->
+![Android](assets/images/Android.png)
+![iOS](assets/images/iOS.png)
+
+## YouTube Video
+
+[![YouTube](https://img.youtube.com/vi/2wTKP0Rw9Fg/0.jpg)](https://www.youtube.com/watch?v=2wTKP0Rw9Fg)
+
 ## Technologies Used
 
 - Flutter: Google's versatile UI toolkit for crafting natively compiled applications.
@@ -74,6 +80,9 @@ This project was developed by a team of talented contributors from NSBM Green Un
 - Akash Gamage [@](https://github.com/)
 - Akshith Sriyanjith [@](https://github.com/Akshisriyan)
 - Dulanja De Silva [@](https://github.com/dula2000)
+- Akila Tharinda [@](https://github.com/Akilap11)
+- Sachini Anjaana [@](https://github.com/NSachini)
+- Sanduni Upekha [@](https://github.com/SanduniUpekha)
 
 ## About Rootcode Tech-Triathlon
 
