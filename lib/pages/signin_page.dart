@@ -16,6 +16,8 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+  bool _isPasswordVisible = false;
+
   Future<User?> Signin(
       {required String idcontroller, required String pwcontroller}) async {
     FirebaseAuth auth = FirebaseAuth.instance;
@@ -131,12 +133,27 @@ class _SignInPageState extends State<SignInPage> {
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: TextField(
                 controller: pwcontroller,
+                obscureText:
+                    !_isPasswordVisible, // Obfuscate the password when not visible
                 decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10)),
-                    hintText: 'Password',
-                    hintStyle:
-                        const TextStyle(color: Colors.grey, fontSize: 20)),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  hintText: 'Password',
+                  hintStyle: const TextStyle(color: Colors.grey, fontSize: 20),
+                  suffixIcon: IconButton(
+                    icon: Icon(
+                      _isPasswordVisible
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                      color: Colors.grey,
+                    ),
+                    onPressed: () {
+                      setState(() {
+                        _isPasswordVisible = !_isPasswordVisible;
+                      });
+                    },
+                  ),
+                ),
               ),
             ),
             const SizedBox(
