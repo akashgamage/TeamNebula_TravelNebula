@@ -83,6 +83,7 @@ This project was developed by a team of talented contributors from NSBM Green Un
 - Dulanja De Silva [@dula2000](https://github.com/dula2000)
 - Akila Tharinda [@Akilap11](https://github.com/Akilap11)
 - Sachini Anjaana [@NSachini](https://github.com/NSachini)
+- Sanduni Upeksha [@SanduniUpekha](https://github.com/SanduniUpekha)
 - Dimuthu Maduranga [@PDMaduranga](https://github.com/PDMaduranga)
 - Madushan Deshapriya [@Madhushan13](https://github.com/Madhushan13)
 - Kavindu Jayalal [@dkjayalal](https://github.com/dkjayalal)
