@@ -11,7 +11,7 @@ Welcome to the **Travel Nebula** repository! This project is a Flutter applicati
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [YouTube Video](#YouTube-Video)
+- [YouTube Video](#youtube-video)
 - [Technologies Used](#technologies-used)
 - [Contributors](#contributors)
 - [About Rootcode Tech-Triathlon](#about-rootcode-tech-triathlon)
@@ -64,6 +64,7 @@ Welcome to the **Travel Nebula** repository! This project is a Flutter applicati
 ![Android](assets/images/Android.png)
 ![iOS](assets/images/iOS.png)
 
+
 ## YouTube Video
 
 [![YouTube](https://img.youtube.com/vi/2wTKP0Rw9Fg/0.jpg)](https://www.youtube.com/watch?v=2wTKP0Rw9Fg)
@@ -77,15 +78,21 @@ Welcome to the **Travel Nebula** repository! This project is a Flutter applicati
 
 This project was developed by a team of talented contributors from NSBM Green University.
 
-- Akash Gamage [@](https://github.com/)
-- Akshith Sriyanjith [@](https://github.com/Akshisriyan)
-- Dulanja De Silva [@](https://github.com/dula2000)
-- Akila Tharinda [@](https://github.com/Akilap11)
-- Sachini Anjaana [@](https://github.com/NSachini)
-- Sanduni Upekha [@](https://github.com/SanduniUpekha)
+- Akash Gamage [@akashgamage](https://github.com/akashgamage)
+- Akshith Sriyanjith [@Akshisriyan](https://github.com/Akshisriyan)
+- Dulanja De Silva [@dula2000](https://github.com/dula2000)
+- Akila Tharinda [@Akilap11](https://github.com/Akilap11)
+- Sachini Anjaana [@NSachini](https://github.com/NSachini)
+- Dimuthu Maduranga [@PDMaduranga](https://github.com/PDMaduranga)
+- Madushan Deshapriya [@Madhushan13](https://github.com/Madhushan13)
+- Kavindu Jayalal [@dkjayalal](https://github.com/dkjayalal)
 
 ## About Rootcode Tech-Triathlon
+Tech-Triathlon, by Rootcode aims to enhance the industry-relevant skills of future tech enthusiasts. This unique competition offers a platform for teams to demonstrate their abilities in software engineering, artificial intelligence and UX design.
 
+When building modern software, these three pillars are essential to ensure success of a digital product. Therefore, this competition consists of three phases - A hackathon, designathon and a datathon. While all the participants don’t need to excel in all three disciplines, we encourage teams with members who excel in their respective areas to contribute to the overall output.
+
+The Tech-Triathlon is organized by Rootcoders, a team passionate about upskilling the next generation and fostering a strong tech community in Sri Lanka. We believe this competition will provide participants with valuable opportunities to achieve their career goals. Tech-Triathlon by Rootcode offers a chance to develop technical and interpersonal abilities. Join us now for an innovative, collaborative, and boundary-pushing journey.
 
 
 ## Acknowledgments
