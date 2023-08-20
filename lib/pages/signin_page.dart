@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:travel_nebula/pages/booking_page.dart';
 import 'package:travel_nebula/pages/bottom_navbar.dart';
+import 'package:travel_nebula/pages/home_page.dart';
 import 'package:travel_nebula/pages/signup_page.dart';
 
 @override
@@ -16,27 +17,23 @@ class SignInPage extends StatefulWidget {
 
 class _SignInPageState extends State<SignInPage> {
   Future<User?> Signin(
-      {required String email, required String password}) async {
-    FirebaseAuth auth = FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: email, password: password) as FirebaseAuth;
+      {required String idcontroller, required String pwcontroller}) async {
+    FirebaseAuth auth = FirebaseAuth.instance;
     User? user;
     try {
       UserCredential userCredential = await auth.signInWithEmailAndPassword(
-          email: idcontroller.text, password: pwcontroller.text);
+          email: idcontroller, password: pwcontroller);
       user = userCredential.user;
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => Booking()));
-
-      return user;
+          context, MaterialPageRoute(builder: (context) => const HomePage()));
     } on FirebaseAuthException catch (e) {
       if (e.code == 'user-not-found') {
         print('No user found for that email.');
-        return null;
       } else if (e.code == 'wrong-password') {
         print('Wrong password provided for that user.');
-        return null;
       }
     }
+    return user;
   }
 
   final idcontroller = TextEditingController();
@@ -162,8 +159,8 @@ class _SignInPageState extends State<SignInPage> {
                 child: ElevatedButton(
                   onPressed: () async {
                     await Signin(
-                      email: idcontroller.text,
-                      password: pwcontroller.text,
+                      idcontroller: idcontroller.text,
+                      pwcontroller: pwcontroller.text,
                     );
                   },
                   style: ElevatedButton.styleFrom(

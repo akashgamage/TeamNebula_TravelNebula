@@ -12,9 +12,11 @@ import 'firebase_options.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    name: 'Nebula',
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+      options: const FirebaseOptions(
+          apiKey: "AIzaSyBt3WsW_CWzsmWLXI4mXlQ37ZLkn5n_fmM",
+          appId: "1:118109128001:web:7736f15e430ec2dfb20dc0",
+          messagingSenderId: "118109128001",
+          projectId: "nebula-55342"));
   runApp(
     DevicePreview(
       // Wrap your app with DevicePreview
