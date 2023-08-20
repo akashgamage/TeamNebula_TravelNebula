@@ -79,7 +79,7 @@ Welcome to the **Travel Nebula** repository! This project is a Flutter applicati
 This project was developed by a team of talented contributors from NSBM Green University.
 
 - Akash Gamage [@akashgamage](https://github.com/akashgamage)
-- Akshith Sriyanjith [@Akshisriyan](https://github.com/Akshisriyan)
+- Akshitha Sriyanjith [@Akshisriyan](https://github.com/Akshisriyan)
 - Dulanja De Silva [@dula2000](https://github.com/dula2000)
 - Akila Tharinda [@Akilap11](https://github.com/Akilap11)
 - Sachini Anjaana [@NSachini](https://github.com/NSachini)
