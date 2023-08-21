@@ -91,9 +91,7 @@ This project was developed by a team of talented contributors from NSBM Green Un
 ## About Rootcode Tech-Triathlon
 Tech-Triathlon, by Rootcode aims to enhance the industry-relevant skills of future tech enthusiasts. This unique competition offers a platform for teams to demonstrate their abilities in software engineering, artificial intelligence and UX design.
 
-When building modern software, these three pillars are essential to ensure success of a digital product. Therefore, this competition consists of three phases - A hackathon, designathon and a datathon. While all the participants don’t need to excel in all three disciplines, we encourage teams with members who excel in their respective areas to contribute to the overall output.
-
-The Tech-Triathlon is organized by Rootcoders, a team passionate about upskilling the next generation and fostering a strong tech community in Sri Lanka. We believe this competition will provide participants with valuable opportunities to achieve their career goals. Tech-Triathlon by Rootcode offers a chance to develop technical and interpersonal abilities. Join us now for an innovative, collaborative, and boundary-pushing journey.
+When building modern software, these three pillars are essential to ensure success of a digital product. Therefore, this competition consists of three phases - A hackathon, designathon and a datathon. The Tech-Triathlon is organized by Rootcoders, a team passionate about upskilling the next generation and fostering a strong tech community in Sri Lanka.
 
 
 ## Acknowledgments
